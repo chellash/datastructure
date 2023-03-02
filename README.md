@@ -1,4 +1,4 @@
-<h1>Data structure algorithm samples from CHatGPT using GoF patterns</h1>
+<h1>Data structure algorithm samples from ChatGPT using GoF patterns</h1>
 
 <h2>Bubble sort using Iterator pattern</h2>
 The Iterator pattern is used to provide a way to access the elements of an aggregate object (such as an array) sequentially, without exposing the underlying implementation. It is useful when you have a collection of objects that you want to iterate over, but you don't want to expose the internal representation of the collection to the client.

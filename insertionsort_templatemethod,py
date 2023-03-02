@@ -1,0 +1,33 @@
+class InsertionSort:
+    def sort(self, collection):
+        n = len(collection)
+        for i in range(1, n):
+            self.insert(collection, i)
+
+    def insert(self, collection, i):
+        j = i - 1
+        while j >= 0 and self.compare(collection[j], collection[j+1]):
+            collection[j], collection[j+1] = collection[j+1], collection[j]
+            j -= 1
+
+    def compare(self, a, b):
+        return a > b
+
+class AscendingInsertionSort(InsertionSort):
+    def compare(self, a, b):
+        return a > b
+
+class DescendingInsertionSort(InsertionSort):
+    def compare(self, a, b):
+        return a < b
+
+if __name__ == "__main__":
+    collection = [10, 7, 8, 9, 1, 5]
+    sort_algorithm = AscendingInsertionSort()
+    sort_algorithm.sort(collection)
+    print(collection)
+
+    collection = [10, 7, 8, 9, 1, 5]
+    sort_algorithm = DescendingInsertionSort()
+    sort_algorithm.sort(collection)
+    print(collection)
